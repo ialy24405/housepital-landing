@@ -15,6 +15,14 @@
     <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
+    <!-- Prevent Theme Flash -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+
     <!-- Project Style & Scripts -->
     <link rel="stylesheet" href="/src/style.css" />
     <script type="module" src="/src/main.js" defer></script>
@@ -31,7 +39,8 @@
     <header class="navbar-wrapper">
       <nav class="navbar glass">
         <a href="#" class="nav-logo">
-          <img src="/White Logo.png" alt="Housepital-AI" class="logo-img" style="height: 38px; display: block;" />
+          <img src="/White Logo.png" alt="Housepital-AI" class="logo-img logo-dark-theme" style="height: 38px;" />
+          <img src="/Black Logo.png" alt="Housepital-AI" class="logo-img logo-light-theme" style="height: 38px;" />
         </a>
         <ul class="nav-links">
           <li><a href="#about" class="nav-link">About</a></li>
@@ -41,9 +50,15 @@
           <li><a href="#personas" class="nav-link">Personas</a></li>
           <li><a href="#contact" class="nav-link btn-secondary-pill magnet-btn">Get in Touch</a></li>
         </ul>
-        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
-          <i data-lucide="menu"></i>
-        </button>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <button id="theme-toggle" class="theme-toggle-btn magnet-btn" aria-label="Toggle Theme" style="display: flex;">
+            <i data-lucide="moon" class="moon-icon"></i>
+            <i data-lucide="sun" class="sun-icon"></i>
+          </button>
+          <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+            <i data-lucide="menu"></i>
+          </button>
+        </div>
       </nav>
       <!-- Mobile Drawer -->
       <div class="mobile-drawer glass">
@@ -673,7 +688,8 @@
         <div class="footer-grid">
           <div class="footer-brand">
             <div class="footer-logo">
-              <img src="/White Logo.png" alt="Housepital-AI" class="logo-img" style="height: 38px; margin-bottom: 12px; display: block;" />
+              <img src="/White Logo.png" alt="Housepital-AI" class="logo-img logo-dark-theme" style="height: 38px; margin-bottom: 12px;" />
+              <img src="/Black Logo.png" alt="Housepital-AI" class="logo-img logo-light-theme" style="height: 38px; margin-bottom: 12px;" />
             </div>
             <p class="footer-desc">Empowering clinical home diagnostics through custom software, IoT, and Deep Learning.</p>
           </div>

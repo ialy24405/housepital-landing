@@ -10,9 +10,11 @@ import { ContactForm } from './components/ContactForm.js';
 import { Showcase } from './components/Showcase.js';
 import { MagnetEffect } from './components/MagnetEffect.js';
 import { runTextScramble } from './components/TextScramble.js';
+import { ThemeManager } from './components/ThemeManager.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Components
+  const theme = new ThemeManager();
   const navbar = new Navbar();
   const bento = new BentoGrid();
   const matchmaker = new Matchmaker();
