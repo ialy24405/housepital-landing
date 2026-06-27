@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Housepital-AI — Hospital-Grade Home Healthcare Ecosystem</title>
+    <meta name="description" content="Housepital-AI is an on-demand, sensor-integrated healthcare system bringing automated triage, real-time vital monitoring, and smart nurse-patient matchmaking to Egypt." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Project Style & Scripts -->
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Radial Glow Effects -->
+    <div class="radial-glow glow-1"></div>
+    <div class="radial-glow glow-2"></div>
+    
+    <!-- Visual Grid Background Overlay -->
+    <div class="grid-overlay"></div>
+
+    <!-- Floating Navbar -->
+    <header class="navbar-wrapper">
+      <nav class="navbar glass">
+        <a href="#" class="nav-logo">
+          <img src="/White Logo.png" alt="Housepital-AI" class="logo-img" style="height: 38px; display: block;" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#matchmaker" class="nav-link">Matchmaker</a></li>
+          <li><a href="#diagnostics" class="nav-link">AI Engine</a></li>
+          <li><a href="#personas" class="nav-link">Personas</a></li>
+          <li><a href="#contact" class="nav-link btn-secondary-pill magnet-btn">Get in Touch</a></li>
+        </ul>
+        <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </nav>
+      <!-- Mobile Drawer -->
+      <div class="mobile-drawer glass">
+        <ul class="mobile-nav-links">
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#features" class="mobile-link">Features</a></li>
+          <li><a href="#matchmaker" class="mobile-link">Matchmaker</a></li>
+          <li><a href="#diagnostics" class="mobile-link">AI Engine</a></li>
+          <li><a href="#personas" class="mobile-link">Personas</a></li>
+          <li><a href="#contact" class="mobile-link mobile-btn">Get in Touch</a></li>
+        </ul>
+      </div>
+      <!-- Scroll progress indicator line -->
+      <div class="scroll-progress"></div>
+    </header>
+
+    <main class="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="hero-container">
+          <div class="hero-badge glass">
+            <span class="pulse-dot"></span>
+            <span class="badge-text">Egypt's First Smart Clinical Home Care</span>
+          </div>
+          <h1 class="hero-title">
+            Hospital-Grade Care,<br />
+            <span id="scramble-word" class="text-gradient">Delivered to Your Doorstep.</span>
+          </h1>
+          <p class="hero-subtitle">
+            An advanced, sensor-integrated hospital-at-home ecosystem that bridges the gap between deep-learning clinical triage, real-time IoT vital monitoring, and instant medical dispatch.
+          </p>
+          <div class="hero-actions">
+            <a href="#matchmaker" class="btn-primary magnet-btn">
+              <span>Try Matchmaker Demo</span>
+              <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="#features" class="btn-secondary magnet-btn">
+              <span>Explore Ecosystem</span>
+            </a>
+          </div>
+          
+          <!-- Mockup Showcase Container -->
+          <div class="hero-mockup-wrapper">
+            <div class="mockup-frame glass tilt-element" data-tilt>
+              <div class="card-glow"></div>
+              <div class="mockup-header">
+                <div class="mockup-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="mockup-title">housepital-admin-portal v1.0.0</div>
+                <div class="mockup-actions-placeholder"></div>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-sidebar">
+                  <div class="sidebar-item active"><i data-lucide="layout-dashboard"></i><span>Dashboard</span></div>
+                  <div class="sidebar-item"><i data-lucide="users"></i><span>Staff Matching</span></div>
+                  <div class="sidebar-item"><i data-lucide="activity"></i><span>Vitals Feed</span></div>
+                  <div class="sidebar-item"><i data-lucide="heart-pulse"></i><span>AI Diagnostic</span></div>
+                </div>
+                <div class="mockup-main">
+                  <div class="mockup-dashboard-grid">
+                    <div class="dashboard-stat-card glass border-green">
+                      <div class="stat-header">
+                        <span class="stat-title">Active Home Bookings</span>
+                        <i data-lucide="check-circle" class="text-green"></i>
+                      </div>
+                      <div class="stat-value">24<span class="stat-unit">/30</span></div>
+                      <div class="stat-desc text-green">100% completion rate</div>
+                    </div>
+                    <div class="dashboard-stat-card glass border-blue">
+                      <div class="stat-header">
+                        <span class="stat-title">Connected IoT Sensors</span>
+                        <i data-lucide="cpu" class="text-blue"></i>
+                      </div>
+                      <div class="stat-value">18<span class="stat-unit"> units</span></div>
+                      <div class="ecg-container">
+                        <svg class="ecg-graph" viewBox="0 0 100 20">
+                          <path class="ecg-path" d="M0,10 L20,10 L25,5 L30,15 L35,10 L50,10 L53,2 L56,18 L59,10 L62,12 L65,10 L100,10" />
+                        </svg>
+                      </div>
+                      <div class="stat-desc text-blue">ESP32 BLE/WiFi live</div>
+                    </div>
+                    <div class="dashboard-stat-card glass border-purple">
+                      <div class="stat-header">
+                        <span class="stat-title">AI Triage Inquiries</span>
+                        <i data-lucide="sparkles" class="text-purple"></i>
+                      </div>
+                      <div class="stat-value">1,482</div>
+                      <div class="stat-desc text-purple">99.2% classification accuracy</div>
+                    </div>
+                    
+                    <!-- Asymmetric large grid item inside mockup -->
+                    <div class="dashboard-large-card glass col-span-3">
+                      <div class="large-card-header">
+                        <span class="large-card-title">Real-Time Dispatch Operations</span>
+                        <div class="pulse-badge"><span class="pulse-dot"></span>Live Dispatch Feed</div>
+                      </div>
+                      <div class="mockup-table">
+                        <div class="table-row header">
+                          <span>Patient</span>
+                          <span>Assigned Staff</span>
+                          <span>Status</span>
+                          <span>ETA</span>
+                        </div>
+                        <div class="table-row">
+                          <span>Ali Ibrahim (New Cairo)</span>
+                          <span>Nurse Sarah Ahmed</span>
+                          <span class="badge badge-green">En Route</span>
+                          <span>12 mins</span>
+                        </div>
+                        <div class="table-row">
+                          <span>Annmarie (Zamalek)</span>
+                          <span>Dr. Omar Ashraf</span>
+                          <span class="badge badge-blue">Consulting</span>
+                          <span>Ongoing</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text-content">
+              <h2 class="section-title-left">
+                Precision Built.<br />
+                <span class="text-gradient">Architecturally Sound.</span>
+              </h2>
+              <p class="about-desc">
+                We are reshaping home-based healthcare by deploying custom IoT sensory devices, real-time WebSockets dispatching servers, and advanced classification pipelines directly into local clinical practices.
+              </p>
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-num" data-val="15">0</div>
+                  <div class="stat-label">Max Search Radius (KM)</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num" data-val="60">0</div>
+                  <div class="stat-label">Nurse Offer Response Window (S)</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num" data-val="350">0</div>
+                  <div class="stat-label">Base Travel Rate (EGP/KM)</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num" data-val="10">0</div>
+                  <div class="stat-label">Platform Commission (%)</div>
+                </div>
+              </div>
+            </div>
+            <div class="about-visual glass">
+              <div class="about-visual-header">
+                <i data-lucide="terminal" class="text-purple"></i>
+                <span>matchingService.js</span>
+              </div>
+              <div class="code-preview">
+                <pre><code><span class="code-comment">// Phase 2: Weighted Multi-Factor Scoring</span>
+<span class="code-keyword">function</span> <span class="code-title">calculateMatchScore</span>(nurse, distance) {
+  <span class="code-keyword">const</span> distanceW = (1 - (distance / maxRadius)) * 0.35;
+  <span class="code-keyword">const</span> ratingW = (nurse.rating / 5) * 0.25;
+  <span class="code-keyword">const</span> experienceW = Math.min(nurse.experience / 10, 1) * 0.15;
+  <span class="code-keyword">const</span> completionW = (nurse.completionRate / 100) * 0.15;
+  <span class="code-keyword">const</span> responseW = (1 - Math.min(nurse.avgResponse / 600, 1)) * 0.10;
+  
+  <span class="code-keyword">return</span> distanceW + ratingW + experienceW + completionW + responseW;
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ECOSYSTEM BENTO GRID -->
+      <section class="features-section" id="features">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">The Asymmetric Ecosystem</h2>
+            <p class="section-subtitle">A multi-layered, interconnected mesh of clinical hardware and software.</p>
+          </div>
+          
+          <div class="asymmetric-bento-grid">
+            <!-- Large Card 1: AI Triage -->
+            <div class="bento-card bento-large glass glow-purple-border reveal" data-tilt>
+              <div class="card-glow"></div>
+              
+              <!-- Chat Mockup to fill blank space -->
+              <div class="bento-chat-mockup">
+                <div class="chat-bubble user">
+                  <i data-lucide="user" class="chat-avatar"></i>
+                  <div class="chat-text">Sudden rash on chest, body aches, Temp 38.8°C.</div>
+                </div>
+                <div class="chat-bubble ai">
+                  <i data-lucide="sparkles" class="chat-avatar text-purple"></i>
+                  <div class="chat-text">
+                    <span class="chat-tag triage-high">Triage Priority: High</span><br />
+                    <span>Running forward pass on symptom vector... Classification: <strong>Scarlet Fever (92% Conf)</strong>.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-content-bottom">
+                <div class="card-icon-wrapper bg-gradient-purple">
+                  <i data-lucide="sparkles"></i>
+                </div>
+                <h3 class="card-title">AI Triage Assistant</h3>
+                <p class="card-desc">Automated symptom analysis and diagnosis classification pipeline. Built-in deep learning classification assists doctors with instant diagnostic suggestions and patient priority indicators.</p>
+                <div class="card-tags">
+                  <span class="tag">AI Chatbot</span>
+                  <span class="tag">Deep Learning</span>
+                  <span class="tag">Clinical Triage</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Wide Card 2: IoT Sensors -->
+            <div class="bento-card bento-wide glass glow-blue-border reveal reveal-delay-1" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper bg-gradient-blue">
+                <i data-lucide="cpu"></i>
+              </div>
+              <h3 class="card-title">IoT Bedside Vitals Wearables</h3>
+              <p class="card-desc">Embedded custom ESP32 sensory system with MAX30102 pulse oximetry and temperature tracking. Provides live clinical telemetry over WebSockets/Socket.IO with seamless Bluetooth Low Energy (BLE) fallback during visits.</p>
+              <div class="card-tags">
+                <span class="tag">ESP32 Hardware</span>
+                <span class="tag">WebSockets</span>
+                <span class="tag">BLE Fallback</span>
+              </div>
+            </div>
+
+            <!-- Square Card 3: Mobile Apps -->
+            <div class="bento-card bento-square glass glow-green-border reveal reveal-delay-2" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper bg-gradient-green">
+                <i data-lucide="tablet"></i>
+              </div>
+              <h3 class="card-title">Dual Flutter Applications</h3>
+              <p class="card-desc">Bespoke cross-platform mobile apps for Patient booking, Nurse dispatch tracking, and Doctor telehealth management.</p>
+              <div class="card-tags">
+                <span class="tag">Flutter</span>
+                <span class="tag">Dart</span>
+                <span class="tag">Mobile Apps</span>
+              </div>
+            </div>
+
+            <!-- Square Card 4: Central Operations -->
+            <div class="bento-card bento-square glass glow-amber-border reveal reveal-delay-3" data-tilt>
+              <div class="card-glow"></div>
+              <div class="card-icon-wrapper bg-gradient-amber">
+                <i data-lucide="shield-check"></i>
+              </div>
+              <h3 class="card-title">Central Web Operations</h3>
+              <p class="card-desc">Advanced React web panel for hospital staff management, device fleet registrations, audit logs, and matching overrides.</p>
+              <div class="card-tags">
+                <span class="tag">React</span>
+                <span class="tag">Admin Dash</span>
+                <span class="tag">Audit Logs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CLINICAL APP SHOWCASE -->
+      <section class="showcase-section" id="showcase">
+        <div class="container">
+          <div class="showcase-grid">
+            <div class="showcase-text-content reveal">
+              <div class="hero-badge glass">
+                <span class="pulse-dot"></span>
+                <span class="badge-text">Mobile Interface Walkthrough</span>
+              </div>
+              <h2 class="section-title-left">
+                Production-Ready UI.<br />
+                <span class="text-gradient-purple">Designed for Patients & Staff.</span>
+              </h2>
+              <p class="showcase-desc">
+                Explore the actual application interfaces deployed across our patient and caregiver ecosystems. Our custom Flutter clients provide lightweight, secure access to vital telemetry, automated triage, and digital visit logs.
+              </p>
+              
+              <div class="showcase-tabs">
+                <button class="tab-btn active" data-target="0">
+                  <span>Welcome & Onboarding Access</span>
+                </button>
+                <button class="tab-btn" data-target="1">
+                  <span>AI Clinical Triage Setup</span>
+                </button>
+                <button class="tab-btn" data-target="2">
+                  <span>IoT Bedside BLE Setup</span>
+                </button>
+              </div>
+            </div>
+            
+            <div class="showcase-visual reveal reveal-delay-1">
+              <div class="device-mockup-wrapper">
+                <div class="phone-frame">
+                  <div class="phone-speaker"></div>
+                  <div class="phone-screen">
+                    <img id="showcase-screen-img" src="/Welcome Screen.png" alt="Housepital App Screen" class="phone-screen-content" />
+                  </div>
+                  <div class="phone-home-bar"></div>
+                </div>
+                <div class="phone-shadow-decor"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SMART MATCHMAKER SIMULATOR -->
+      <section class="simulator-section" id="matchmaker">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Core Dispatch Engine</h2>
+            <p class="section-subtitle">Experience our 4-phase InDriver-style matching algorithm in real-time.</p>
+          </div>
+          
+          <div class="matchmaker-console glass reveal">
+            <!-- Left Console Settings & Status -->
+            <div class="console-sidebar">
+              <div class="sidebar-header">
+                <i data-lucide="sliders" class="text-green"></i>
+                <span>Matchmaker Controls</span>
+              </div>
+              <div class="console-controls">
+                <div class="control-group">
+                  <label for="select-service">Select Clinical Service</label>
+                  <select id="select-service" class="console-select">
+                    <option value="wound_care" data-price="150" data-name="Wound Care & Dressing">Wound Care (150 EGP)</option>
+                    <option value="nebulizer" data-price="100" data-name="Nebulizer Session">Nebulizer Session (100 EGP)</option>
+                    <option value="vital_check" data-price="80" data-name="Routine Vital Assessment">Vital Assessment (80 EGP)</option>
+                    <option value="iv_therapy" data-price="200" data-name="Intravenous Therapy">IV Infusion (200 EGP)</option>
+                  </select>
+                </div>
+                <div class="control-group">
+                  <label for="select-gender">Gender Preference</label>
+                  <select id="select-gender" class="console-select">
+                    <option value="any">Any Gender</option>
+                    <option value="female">Female Preferred</option>
+                    <option value="male">Male Preferred</option>
+                  </select>
+                </div>
+                <button id="btn-start-match" class="btn-console-primary magnet-btn">
+                  <i data-lucide="play"></i>
+                  <span>Trigger Dispatch Request</span>
+                </button>
+              </div>
+              
+              <!-- Match status log -->
+              <div class="console-logs glass">
+                <div class="logs-header">
+                  <i data-lucide="terminal" class="text-orange"></i>
+                  <span>Console Logs</span>
+                </div>
+                <div id="matching-log-output" class="log-entries">
+                  <div class="log-entry system">> System ready. Select parameters and click 'Trigger Dispatch' to test.</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Visual Radar & Offer Board -->
+            <div class="console-main">
+              <!-- Animated Radar Panel -->
+              <div id="radar-panel" class="radar-container active">
+                <div class="radar-scanlines"></div>
+                <div class="radar-circles">
+                  <div class="circle c-1"></div>
+                  <div class="circle c-2"></div>
+                  <div class="circle c-3"></div>
+                </div>
+                <!-- Radar Dots -->
+                <div class="radar-center">
+                  <i data-lucide="map-pin" class="center-pin"></i>
+                  <span class="patient-ping-wave"></span>
+                </div>
+                
+                <!-- Simulated Candidate Nurse Nodes (Hidden by default, shown during scan) -->
+                <div class="nurse-node node-1" data-id="1">
+                  <div class="node-pulse"></div>
+                  <i data-lucide="user-plus"></i>
+                </div>
+                <div class="nurse-node node-2" data-id="2">
+                  <div class="node-pulse"></div>
+                  <i data-lucide="user-plus"></i>
+                </div>
+                <div class="nurse-node node-3" data-id="3">
+                  <div class="node-pulse"></div>
+                  <i data-lucide="user-plus"></i>
+                </div>
+                
+                <div class="radar-instruction">
+                  <i data-lucide="search" class="animate-bounce"></i>
+                  <p>Awaiting Dispatch Trigger</p>
+                </div>
+              </div>
+
+              <!-- Offer Results Board (Hidden by default, shown when matched) -->
+              <div id="offers-board" class="offers-container hidden">
+                <div class="board-header">
+                  <h4 class="board-title"><i data-lucide="users" class="text-green"></i> Live Offers Received (60s Window)</h4>
+                  <span class="offers-timer glass"><span id="countdown-num">60</span>s</span>
+                </div>
+                <div id="offers-list" class="offers-grid">
+                  <!-- Generated dynamically via JS -->
+                </div>
+              </div>
+              
+              <!-- Booking Confirmation Success Screen -->
+              <div id="booking-success" class="booking-success-container hidden">
+                <div class="success-icon-wrapper">
+                  <i data-lucide="check-circle" class="text-green"></i>
+                </div>
+                <h4 class="success-title">Match Confirmed & Dispatched!</h4>
+                <p class="success-desc">The nurse has accepted your booking. Give them this Secure PIN when they arrive at your home.</p>
+                <div class="pin-code-wrapper glass">
+                  <span class="pin-label">VISIT PIN CODE</span>
+                  <span id="visit-pin-display" class="pin-number">----</span>
+                </div>
+                <button id="btn-reset-match" class="btn-secondary-pill mt-4">Reset Simulator</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI DIAGNOSTIC ENGINE SCANNER -->
+      <section class="diagnostics-section" id="diagnostics">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">AI Diagnostic Pipelines</h2>
+            <p class="section-subtitle">Simulate our deep learning skin lesion (DermNet) and diabetic foot classification models.</p>
+          </div>
+          
+          <div class="diagnostics-grid">
+            <!-- Left: Interactive Scanner -->
+            <div class="scanner-card glass reveal">
+              <div class="scanner-viewport">
+                <div id="scanner-line" class="scanner-scan-line hidden"></div>
+                <!-- Simulated Image placeholders -->
+                <div id="scan-image-placeholder" class="scan-image active">
+                  <i data-lucide="image" class="placeholder-icon"></i>
+                  <p>Click 'Trigger AI Scan' below</p>
+                </div>
+                <div id="scan-image-derm" class="scan-image hidden">
+                  <div class="mock-skin-lesion"></div>
+                </div>
+                <div id="scan-image-dfu" class="scan-image hidden">
+                  <div class="mock-foot-ulcer"></div>
+                </div>
+              </div>
+              <div class="scanner-actions">
+                <button id="btn-scan-derm" class="btn-scan" data-type="derm">
+                  <i data-lucide="shield-alert"></i>
+                  <span>DermNet Lesion Check</span>
+                </button>
+                <button id="btn-scan-dfu" class="btn-scan" data-type="dfu">
+                  <i data-lucide="activity"></i>
+                  <span>Diabetic Foot Check</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Diagnostic Output -->
+            <div class="results-card glass reveal reveal-delay-1">
+              <div class="results-header">
+                <i data-lucide="brain-circuit" class="text-purple"></i>
+                <span>Classification Inference Output</span>
+              </div>
+              <div class="results-body">
+                <div id="result-status" class="result-status-empty">
+                  Awaiting image classification request...
+                </div>
+                <div id="result-data" class="result-data-container hidden">
+                  <div class="result-row">
+                    <span class="res-lbl">Model:</span>
+                    <span id="res-model" class="res-val text-purple">--</span>
+                  </div>
+                  <div class="result-row">
+                    <span class="res-lbl">Detected Class:</span>
+                    <span id="res-class" class="res-val text-white font-bold">--</span>
+                  </div>
+                  <div class="result-row">
+                    <span class="res-lbl">Confidence:</span>
+                    <div class="confidence-bar-wrapper">
+                      <div id="res-conf-bar" class="confidence-fill bg-gradient-purple" style="width: 0%"></div>
+                      <span id="res-conf-text" class="confidence-text">0%</span>
+                    </div>
+                  </div>
+                  <div class="result-row">
+                    <span class="res-lbl">Triage Priority:</span>
+                    <span id="res-triage" class="badge">--</span>
+                  </div>
+                  <div class="result-recommendation mt-4 glass">
+                    <span class="rec-title"><i data-lucide="info"></i> Automated Action Suggestion</span>
+                    <p id="res-rec">--</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PERSONAS SECTIONS -->
+      <section class="personas-section" id="personas">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Engineered For Every User Role</h2>
+            <p class="section-subtitle">How our multi-channel platform satisfies patients, clinical practitioners, and family members.</p>
+          </div>
+          
+          <div class="personas-grid">
+            <!-- Patient Card -->
+            <div class="persona-card glass border-green reveal">
+              <div class="persona-header">
+                <div class="persona-icon bg-gradient-green"><i data-lucide="user"></i></div>
+                <h3 class="persona-title">Patients</h3>
+              </div>
+              <p class="persona-desc">Get hospital-grade healthcare delivered directly to your bed. Schedule doctors, call on-demand nurses, view live clinical ETAs, and process automated wallet payments securely.</p>
+              <ul class="persona-features">
+                <li><i data-lucide="check"></i> On-demand nurse request in 15km</li>
+                <li><i data-lucide="check"></i> Digital payment wallet</li>
+                <li><i data-lucide="check"></i> Live medical provider GPS tracking</li>
+              </ul>
+            </div>
+
+            <!-- Nurse Card -->
+            <div class="persona-card glass border-blue reveal reveal-delay-1">
+              <div class="persona-header">
+                <div class="persona-icon bg-gradient-blue"><i data-lucide="activity"></i></div>
+                <h3 class="persona-title">Home Care Nurses</h3>
+              </div>
+              <p class="persona-desc">Receive clinical dispatch requests matching your skills. Connect custom IoT oximetry/temp sensors at the bedside, and automatically compile digital visit reports.</p>
+              <ul class="persona-features">
+                <li><i data-lucide="check"></i> Bedside IoT BLE pairing</li>
+                <li><i data-lucide="check"></i> Digital visit report builder</li>
+                <li><i data-lucide="check"></i> Direct payout and earnings ledger</li>
+              </ul>
+            </div>
+
+            <!-- Doctor Card -->
+            <div class="persona-card glass border-purple reveal reveal-delay-2">
+              <div class="persona-header">
+                <div class="persona-icon bg-gradient-purple"><i data-lucide="stethoscope"></i></div>
+                <h3 class="persona-title">Clinicians & Doctors</h3>
+              </div>
+              <p class="persona-desc">Consult patients via remote telehealth appointments. View live clinical summaries, review historical vital graphs, and get diagnostic aid recommendations from the AI pipeline.</p>
+              <ul class="persona-features">
+                <li><i data-lucide="check"></i> Integrated video teleconsultations</li>
+                <li><i data-lucide="check"></i> Historical patient vitals graphing</li>
+                <li><i data-lucide="check"></i> AI Triage diagnostic suggestion reports</li>
+              </ul>
+            </div>
+
+            <!-- Parent Card -->
+            <div class="persona-card glass border-amber reveal reveal-delay-3">
+              <div class="persona-header">
+                <div class="persona-icon bg-gradient-amber"><i data-lucide="heart"></i></div>
+                <h3 class="persona-title">Parents & Guardians</h3>
+              </div>
+              <p class="persona-desc">Order medical checkups and diagnostic checks on behalf of children or elderly parents. Remotely access live telemetry vital signs streams to monitor them from anywhere.</p>
+              <ul class="persona-features">
+                <li><i data-lucide="check"></i> Request bookings for family dependents</li>
+                <li><i data-lucide="check"></i> Live telemetry stream observer portal</li>
+                <li><i data-lucide="check"></i> Real-time anomaly alerts (SMS/Socket)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="contact-section" id="contact">
+        <div class="container">
+          <div class="contact-card glass reveal">
+            <h2 class="contact-title">Interested in Joining the Future of Care?</h2>
+            <p class="contact-subtitle">Whether you are a patient, a nursing provider, a doctor, or a clinical partner, get in touch to get access to the system.</p>
+            
+            <form id="landing-contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name">Your Full Name</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Mohamed Ali" />
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Email Address</label>
+                  <input type="email" id="form-email" required placeholder="name@example.com" />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-role">You are registering as a:</label>
+                  <select id="form-role" class="form-select">
+                    <option value="patient">Patient / Family Guardian</option>
+                    <option value="nurse">Nurse / Healthcare Provider</option>
+                    <option value="doctor">Medical Doctor (MD)</option>
+                    <option value="partner">Corporate Healthcare Partner</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="form-msg">Inquiry Message</label>
+                <textarea id="form-msg" required rows="4" placeholder="How can Housepital-AI assist you?"></textarea>
+              </div>
+              <button type="submit" class="btn-submit magnet-btn">
+                <span>Submit Inquiry</span>
+                <i data-lucide="send"></i>
+              </button>
+            </form>
+            <div id="form-feedback" class="form-feedback hidden"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <img src="/White Logo.png" alt="Housepital-AI" class="logo-img" style="height: 38px; margin-bottom: 12px; display: block;" />
+            </div>
+            <p class="footer-desc">Empowering clinical home diagnostics through custom software, IoT, and Deep Learning.</p>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-title">Navigation</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#features">Ecosystem</a></li>
+              <li><a href="#matchmaker">Matchmaker</a></li>
+              <li><a href="#diagnostics">AI Engine</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-title">Ecosystem Applications</h4>
+            <ul>
+              <li><a href="#">Patient Android/iOS</a></li>
+              <li><a href="#">Staff Android/iOS</a></li>
+              <li><a href="#">Admin Web Portal</a></li>
+              <li><a href="#">ESP32 Embedded Vitals</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4 class="footer-title">Connect with Us</h4>
+            <div class="footer-socials">
+              <a href="https://github.com/MohamedAhmedAbdElAleem/Housepital-AI" target="_blank" rel="noopener noreferrer" class="social-icon-link github" aria-label="GitHub Repository">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
+                <span>GitHub Repository</span>
+              </a>
+              <a href="https://elbatal-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-icon-link portfolio" aria-label="Team Portfolio">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="2" y1="12" x2="22" y2="12" />
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+                <span>ELBATAL Portfolio</span>
+              </a>
+              <a href="#" class="social-icon-link facebook" aria-label="Facebook Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+                <span>Facebook</span>
+              </a>
+              <a href="#" class="social-icon-link instagram" aria-label="Instagram Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <hr class="footer-divider" />
+        
+        <div class="footer-bottom">
+          <p class="copyright">&copy; 2026 Housepital-AI. All rights reserved.</p>
+          <div class="credit">
+            Engineered with passion by 
+            <a href="https://elbatal-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" class="elbatal-link">
+              ELBATAL
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
